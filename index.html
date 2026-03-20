@@ -193,8 +193,9 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             display: none;
-            align-items: center; justify-content: center;
-            padding: 10px;
+            align-items: flex-start; justify-content: center;
+            padding: 40px 10px;
+            overflow-y: auto;
         }
 
         #modal.active { display: flex; animation: modalIn 0.5s ease; }
@@ -204,7 +205,7 @@
             background: #111;
             width: 100%;
             max-width: 1050px;
-            max-height: 95vh;
+            min-height: auto;
             border-radius: 20px;
             overflow: hidden;
             display: grid;
@@ -246,9 +247,9 @@
         .f-social a:hover { color: var(--accent); transform: scale(1.2); }
 
         @media (max-width: 900px) {
-            .modal-body { grid-template-columns: 1fr; max-height: 100vh; border-radius: 0; }
-            .view-main { height: 300px; }
-            .modal-info { padding: 25px; }
+            .modal-body { display: flex; flex-direction: column; max-height: none; border-radius: 0; }
+            .view-main { height: 350px; }
+            .modal-info { padding: 25px; overflow-y: visible; }
             .m-actions { flex-direction: column; }
         }
     </style>
@@ -268,12 +269,12 @@
 
         <div class="product-grid">
             <!-- Product 1 -->
-            <div class="product-card" data-images='["1سماعه نانو الروسيه/WhatsApp Image 2026-03-19 at 4.37.30 PM.jpeg", "1سماعه نانو الروسيه/WhatsApp Image 2026-03-19 at 4.37.30 PM (1).jpeg", "1سماعه نانو الروسيه/WhatsApp Image 2026-03-19 at 4.37.30 PM (2).jpeg"]' data-full-desc="سماعة لاسلكية مخفية تعمل عن طريق الاهتزاز الكهرومغناطيسي على طبلة الأذن مباشرة. تأتي مع جهاز إرسال Profit S040A ووصلة مخفية حول الرقبة. الحل الأمثل للاتصال السري التام. يستحيل اكتشافها دون أدوات خاصة ولا تصدر أي صوت خارجي.">
+            <div class="product-card" data-images='["1سماعه نانو الروسيه/WhatsApp Image 2026-03-19 at 4.37.30 PM.jpeg", "1سماعه نانو الروسيه/WhatsApp Image 2026-03-19 at 4.37.30 PM (1).jpeg", "1سماعه نانو الروسيه/WhatsApp Image 2026-03-19 at 4.37.30 PM (2).jpeg"]' data-full-desc="سماعة الأذن في هذه المجموعة عبارة عن قرص معدني صغير يُدخل في قناة الأذن ويستقر مباشرة على طبلة الأذن. يتصل القرص بجهاز إرسال (سماعة رأس تُرتدى حول الرقبة). طقم معدات كامل يشمل: سماعة بلوتوث Profit S040A، سلك شحن USB، 4 سماعات أذن مغناطيسية، وعصا استخراج. الحل الأمثل للاتصال السري التام. يستحيل اكتشافها دون أدوات خاصة ولا تصدر أي صوت خارجي.">
                 <div class="img-box">
                     <img src="1سماعه نانو الروسيه/WhatsApp Image 2026-03-19 at 4.37.30 PM.jpeg" alt="Nano 1">
                 </div>
                 <div class="info-box">
-                    <h3>سماعة نانو الروسية (Nano 1)</h3>
+                    <h3>سماعة نانو الروسية</h3>
                     <p>سماعة لاسلكية مخفية تعمل عن طريق الاهتزاز الكهرومغناطيسي على طبلة الأذن مباشرة.</p>
                     <div class="price-row">
                         <div class="price-tag">89.00<span>JD</span></div>
@@ -286,12 +287,12 @@
             </div>
 
             <!-- Product 2 -->
-            <div class="product-card" data-images='["2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM.jpeg", "2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM (1).jpeg", "2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM (2).jpeg", "2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM (3).jpeg"]' data-full-desc="بطاريات Silver Oxide أصلية بجهد 1.55 فولت. رقم الموديل: 337 (SR416SW). مصممة خصيصاً لتشغيل السماعات الدقيقة وأجهزة الاستماع المخفية. تتميز باستقرار عالي وكفاءة طاقة طويلة الأمد وتوفير تيار مستمر للأجهزة الحساسة.">
+            <div class="product-card" data-images='["2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM.jpeg", "2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM (1).jpeg", "2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM (2).jpeg", "2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM (3).jpeg"]' data-full-desc="بطاريات Silver Oxide أصلية بجهد 1.55 فولت. رقم الموديل: 337 (ويعرف أيضاً برمز SR416SW). مخصصة بشكل أساسي للساعات اليدوية الصغيرة جداً، وتستخدم أحياناً في بعض الأجهزة الطبية الدقيقة أو سماعات الأذن المخفية الصغيرة. تتميز باستقرار عالي وكفاءة طاقة طويلة الأمد.">
                 <div class="img-box">
                     <img src="2بطاريات/WhatsApp Image 2026-03-19 at 4.37.32 PM.jpeg" alt="Batteries">
                 </div>
                 <div class="info-box">
-                    <h3>بطاريات ميكرو 337 (SR416SW)</h3>
+                    <h3>بطاريات 337 (SR416SW)</h3>
                     <p>بطاريات Silver Oxide أصلية بجهد 1.55 فولت. مصممة خصيصاً لتشغيل السماعات الدقيقة.</p>
                     <div class="price-row">
                         <div class="price-tag">14.99<span>JD</span></div>
@@ -340,12 +341,12 @@
             </div>
 
             <!-- Product 5 -->
-            <div class="product-card" data-images='["سماعه 2026 pro max/WhatsApp Image 2026-03-19 at 4.37.31 PM.jpeg", "سماعه 2026 pro max/WhatsApp Image 2026-03-19 at 4.37.31 PM (1).jpeg", "سماعه 2026 pro max/WhatsApp Image 2026-03-19 at 4.37.31 PM (2).jpeg"]' data-full-desc="الجيل الجديد من موديل A808. بطارية عملاقة 700 ملم امبير تدوم لـ 4 ساعات من العمل المتواصل. مسافة نقل تصل لـ 40 سم مع نقاء صوت ستيريو مخفي. مصممة للعمل الشاق وتوفير جودة صوت مثالية حتى في ظروف التشويش المنخفضة.">
+            <div class="product-card" data-images='["سماعه 2026 pro max/WhatsApp Image 2026-03-19 at 4.37.31 PM.jpeg", "سماعه 2026 pro max/WhatsApp Image 2026-03-19 at 4.37.31 PM (1).jpeg", "سماعه 2026 pro max/WhatsApp Image 2026-03-19 at 4.37.31 PM (2).jpeg"]' data-full-desc="الجيل الجديد من موديل A808 برؤية Pro Max لعام 2026. بطارية عملاقة 700 ملم امبير تدوم لأكثر من 4 ساعات من العمل المتواصل. مسافة نقل تصل لـ 40 سم بين الكرت واللحمية مع نقاء صوت ستيريو مخفي. مصممة للعمل الشاق وتوفير جودة صوت مثالية حتى في ظروف التشويش.">
                 <div class="img-box">
                     <img src="سماعه 2026 pro max/WhatsApp Image 2026-03-19 at 4.37.31 PM.jpeg" alt="Pro Max">
                 </div>
                 <div class="info-box">
-                    <h3>سماعة 2026 Pro Max - VIP</h3>
+                    <h3>سماعة Pro Max 2026</h3>
                     <p>الجيل الجديد من موديل A808. بطارية عملاقة 700 ملم امبير تدوم لـ 4 ساعات.</p>
                     <div class="price-row">
                         <div class="price-tag">199.00<span>JD</span></div>
@@ -358,12 +359,12 @@
             </div>
 
             <!-- Product 6 -->
-            <div class="product-card" data-images='["فلاته كاميرا روسية نموذج f-G رقم 01—28/WhatsApp Image 2026-03-19 at 4.37.33 PM.jpeg", "فلاته كاميرا روسية نموذج f-G رقم 01—28/WhatsApp Image 2026-03-19 at 4.37.34 PM.jpeg", "فلاته كاميرا روسية نموذج f-G رقم 01—28/WhatsApp Image 2026-03-19 at 4.37.34 PM (1).jpeg"]' data-full-desc="وحدة تصوير دقيقة بدقة 1280×720 عالية الوضوح. تتميز بزاوية رؤية 80 درجة وفلات كيبل طويل (200 مم) لسهولة الإخفاء والتركيب. أداء متوازن بين وضوح الصورة وحجم العدسة المتناهي الصغر. واجهة متعددة الوظائف MIPI / SPI / DVP.">
+            <div class="product-card" data-images='["فلاته كاميرا روسية نموذج f-G رقم 01—28/WhatsApp Image 2026-03-19 at 4.37.33 PM.jpeg", "فلاته كاميرا روسية نموذج f-G رقم 01—28/WhatsApp Image 2026-03-19 at 4.37.34 PM.jpeg", "فلاته كاميرا روسية نموذج f-G رقم 01—28/WhatsApp Image 2026-03-19 at 4.37.34 PM (1).jpeg"]' data-full-desc="وحدة كاميرا 1 - H63 بدقة 1280×720 عالية الوضوح (HD). تتميز بزاوية رؤية واسعة 80 درجة، عدسة 1/4 بوصة، وطول فلات كيبل 200 مم لتركيب مرن في المشاريع. أداء متوازن بين وضوح الصورة وحجم العدسة المتناهي الصغر. واجهة متعددة الوظائف MIPI / SPI / DVP.">
                 <div class="img-box">
                     <img src="فلاته كاميرا روسية نموذج f-G رقم 01—28/WhatsApp Image 2026-03-19 at 4.37.33 PM.jpeg" alt="Camera 2">
                 </div>
                 <div class="info-box">
-                    <h3>كاميرا H63 فلاته - نموذج f-G</h3>
+                    <h3>فلاته كاميرا روسية (H63)</h3>
                     <p>وحدة تصوير دقيقة بدقة 1280×720 عالية الوضوح. تتميز بزاوية رؤية 80 درجة.</p>
                     <div class="price-row">
                         <div class="price-tag">75.00<span>JD</span></div>
@@ -376,12 +377,12 @@
             </div>
 
             <!-- Product 7 -->
-            <div class="product-card" data-images='["لاسلكي ضذ تشويش طلاب التوجيهي/WhatsApp Image 2026-03-19 at 4.37.28 PM.jpeg", "لاسلكي ضذ تشويش طلاب التوجيهي/WhatsApp Image 2026-03-19 at 4.37.28 PM (1).jpeg", "لاسلكي ضذ تشويش طلاب التوجيهي/WhatsApp Image 2026-03-19 at 4.37.28 PM (2).jpeg"]' data-full-desc="الجهاز الأقوى لمواجهة تقنيات التشويش الحديثة. مصمم خصيصاً لتوفير قناة اتصال آمنة ومستقرة تماماً حتى في البيئات المليئة بأجهزة التشويش الإلكتروني. تقنية روسية حصرية لعام 2026 تضمن تجاوز أغلب حواجز التشويش المتداولة.">
+            <div class="product-card" data-images='["لاسلكي ضذ تشويش طلاب التوجيهي/WhatsApp Image 2026-03-19 at 4.37.28 PM.jpeg", "لاسلكي ضذ تشويش طلاب التوجيهي/WhatsApp Image 2026-03-19 at 4.37.28 PM (1).jpeg", "لاسلكي ضذ تشويش طلاب التوجيهي/WhatsApp Image 2026-03-19 at 4.37.28 PM (2).jpeg"]' data-full-desc="الحل الأمثل لمشكلة قطع الاتصالات لطلاب التوجيهي. جهاز لاسلكي يعمل بدون شبكات خلوية وبدون إنترنت. يعتمد على ترددات راديو خاصة قوية ومضادة للتشويش والانقطاع، ليضمن اتصال ثابت وواضح بصوت نقي. يصل المدى حتى 100 متر فعلي ويمكن تعديل المدى ليصل حتى 1 كم حسب الإعدادات.">
                 <div class="img-box">
                     <img src="لاسلكي ضذ تشويش طلاب التوجيهي/WhatsApp Image 2026-03-19 at 4.37.28 PM.jpeg" alt="Anti Jam">
                 </div>
                 <div class="info-box">
-                    <h3>جهاز لاسلكي ضد التشويش (2026)</h3>
+                    <h3>لاسلكي ضد التشويش (طلاب التوجيهي)</h3>
                     <p>الجهاز الأقوى لمواجهة تقنيات التشويش الحديثة. قناة اتصال آمنة ومستقرة.</p>
                     <div class="price-row">
                         <div class="price-tag">250.00<span>JD</span></div>
@@ -394,13 +395,13 @@
             </div>
 
             <!-- Product 8 -->
-            <div class="product-card" data-images='["لحميه كرت VlP/WhatsApp Image 2026-03-19 at 4.37.27 PM.jpeg", "لحميه كرت VlP/WhatsApp Image 2026-03-19 at 4.37.27 PM (1).jpeg", "لحميه كرت VlP/WhatsApp Image 2026-03-19 at 4.37.27 PM (2).jpeg"]' data-full-desc="أصغر سماعة لحمية متوفرة بمقاس 6×6 مم فقط. تتصل لا سلكياً ببطاقة VIP المخفية. وزن ريشة (0.6 غرام) تجعلك تنسى وجودها تماماً في أذنك. جودة صوت مذهلة مقارنة بحجمها المتناهي الصغر، مع تصميم مريح للأذن.">
+            <div class="product-card" data-images='["لحميه كرت VlP/WhatsApp Image 2026-03-19 at 4.37.27 PM.jpeg", "لحميه كرت VlP/WhatsApp Image 2026-03-19 at 4.37.27 PM (1).jpeg", "لحميه كرت VlP/WhatsApp Image 2026-03-19 at 4.37.27 PM (2).jpeg"]' data-full-desc="أصغر سماعة لحمية متوفرة بمقاس 6×10 مم فقط. تتصل لا سلكياً ببطاقة VIP المخفية. وزن ريشة (0.6 غرام) تجعلك تنسى وجودها تماماً في أذنك. جودة صوت مذهلة مقارنة بحجمها المتناهي الصغر.">
                 <div class="img-box">
                     <img src="لحميه كرت VlP/WhatsApp Image 2026-03-19 at 4.37.27 PM.jpeg" alt="VIP Card">
                 </div>
                 <div class="info-box">
-                    <h3>سماعة اللحمية الذهبية - VIP Card</h3>
-                    <p>أصغر سماعة لحمية متوفرة بمقاس 6×6 مم فقط. تتصل لا سلكياً ببطاقة VIP.</p>
+                    <h3>لحمية كرت VIP</h3>
+                    <p>أصغر سماعة لحمية متوفرة بمقاس 6×10 مم فقط. تتصل لا سلكياً ببطاقة VIP.</p>
                     <div class="price-row">
                         <div class="price-tag">130.00<span>JD</span></div>
                         <div class="btn-group">
@@ -440,7 +441,6 @@
             <a href="https://t.me/+PQfC-LwImkExZDI8" target="_blank"><i class="fab fa-telegram-plane"></i></a>
             <a href="https://snapchat.com/t/dNZBXu63" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
             <a href="https://www.tiktok.com/@shadowstorehq?_r=1&_t=zn-94g7ekwbbd0" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/962771444899" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
         <p class="copy">SHADOW STORE &bull; 2026</p>
     </footer>
@@ -456,23 +456,21 @@
         const mFb = document.getElementById('m-fb');
 
         function openModal(card) {
-            const data = {
-                title: card.querySelector('h3').innerText,
-                price: card.querySelector('.price-tag').innerHTML,
-                desc: card.getAttribute('data-full-desc'),
-                imgs: JSON.parse(card.getAttribute('data-images')),
-                fb: card.querySelector('.fb').href
-            };
+            const title = card.querySelector('h3').innerText;
+            const price = card.querySelector('.price-tag').innerText;
+            const desc = card.getAttribute('data-full-desc');
+            const imgs = JSON.parse(card.getAttribute('data-images'));
+            const msg = encodeURIComponent("مهتم بمنتج: " + title + " - " + price);
 
-            mTitle.innerText = data.title;
-            mPrice.innerHTML = data.price;
-            mDesc.innerText = data.desc;
-            mIg.href = "https://ig.me/m/shadowstorehq?text=Interested in " + encodeURIComponent(data.title);
-            mFb.href = data.fb + "?text=Interested in " + encodeURIComponent(data.title);
+            mTitle.innerText = title;
+            mPrice.innerText = price;
+            mDesc.innerText = desc;
+            mIg.href = "https://ig.me/m/shadowstorehq?text=" + msg;
+            mFb.href = "https://m.me/shadowstorehq?text=" + msg;
 
-            mMain.src = data.imgs[0];
+            mMain.src = imgs[0];
             mNav.innerHTML = '';
-            data.imgs.forEach((s, i) => {
+            imgs.forEach((s, i) => {
                 const im = document.createElement('img');
                 im.src = s;
                 if(i===0) im.classList.add('active');
@@ -488,8 +486,22 @@
             document.body.classList.add('modal-open');
         }
 
-        document.querySelectorAll('.product-card').forEach(c => {
-            c.onclick = (e) => { if(!e.target.closest('.btn-group')) openModal(c); };
+        // Initialize product cards
+        document.querySelectorAll('.product-card').forEach(card => {
+            const title = card.querySelector('h3').innerText;
+            const price = card.querySelector('.price-tag').innerText;
+            const msg = encodeURIComponent("مهتم بمنتج: " + title + " - " + price);
+            
+            card.querySelectorAll('.btn-glow.ig').forEach(link => {
+                link.href = "https://ig.me/m/shadowstorehq?text=" + msg;
+            });
+            card.querySelectorAll('.btn-glow.fb').forEach(link => {
+                link.href = "https://m.me/shadowstorehq?text=" + msg;
+            });
+
+            card.onclick = (e) => {
+                if(!e.target.closest('.btn-group')) openModal(card);
+            };
         });
 
         document.querySelector('.close-icon').onclick = () => {
